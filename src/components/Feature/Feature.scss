@@ -1,0 +1,30 @@
+@import "../../scss/variable.scss";
+@import "../../scss/common.scss";
+
+
+.feature {
+    .feature-box {
+        height: 180px;
+        background-color: #f7f7f7;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 56px;
+            color: $color-primary;
+        }
+
+        .feature-box__name {
+            font-size: 1.7rem;
+            color: #3d464d;
+            margin-top: 10px;
+        }
+
+        .feature-box__desc {
+            font-size: 1.4rem;
+            color: #3d464d;
+        }
+    }
+}

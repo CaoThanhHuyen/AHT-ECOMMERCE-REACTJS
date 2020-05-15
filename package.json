@@ -9,7 +9,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "sass": "^1.26.5"
+    "react-slick": "^0.26.1",
+    "sass": "^1.26.5",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
