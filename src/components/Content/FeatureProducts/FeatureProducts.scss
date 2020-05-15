@@ -44,10 +44,104 @@
                 }
             }
         }
+
+        .feature-products__title {
+            font-size: 2.6rem;
+        }
     }
     .slide-products {
         img {
-            // width: 100%;
+            max-width: 100%;
+        }
+
+        .add-cart {
+            position: relative;
+            cursor: pointer;
+            border: 1px solid #cccccc;
+            margin-bottom: 10px;
+
+            &:hover {
+                border: 2px solid $color-primary;
+                .test {
+                   display: flex;
+
+                   
+                }
+            }
+        }
+
+        .test {
+            width: 230px;
+            height: 20%;
+            position: absolute;
+            bottom: -57px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #ffd333;
+            background-color: #ffffff;
+            border-top: none;
+            display: none;
+            padding: 14px;
+            right: -2px;
+
+            .wish {
+                display: inline-flex;
+                align-items: center;
+                i {
+                    font-size: 1.6rem;
+                    color: #ccc;
+                }
+
+                .fa-heart {
+                    margin-right: 10px;
+                }
+            }
+            button {
+                height: 30px;
+                width: 100px;
+                border: none;
+                cursor: pointer;
+                color: #3d464d;
+                font-weight: 700s;
+                background-color: $color-primary;
+            }
+        }
+
+        .slide-product__body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 15px;
+
+            .slide-product__link {
+                font-size: 1.6rem;
+                text-align: right;
+                text-decoration: none;
+                color: #3d464d;
+                line-height: 20px;
+            }
+            .review {
+                span {
+                    font-size: 1.6rem;
+                    margin-right: 10px;
+                    color: #aaa;
+                }
+
+                i.fa.fa-star {
+                    padding-left: 2px;
+                    font-size: 1.5rem;
+                    color: $color-primary;
+                }
+            }
+            .slide-product__price {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: #3d464d;
+                margin-top: 5px;
+            }
+
+            
         }
     }
 
