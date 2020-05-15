@@ -1,0 +1,98 @@
+@import "../../../scss/variable.scss";
+@import "../../../scss/common.scss";
+
+.feature-products {
+
+    .feature-products__box {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .feature-products__title {
+            font-size: 28px;
+            color: #3d464d;
+            &::after {
+                content: "";
+            }
+        }
+
+        .strangfoward {
+            width: 42%;
+            height: 3px;
+            margin: 0 15px;
+            background-color: #ddd;
+
+        }
+
+        .feature-products__box-cate {
+            .feature-products__box-cate-item {
+                font-size: 1.6rem;
+                padding: 3px 15px;
+                color: #3d464d;
+                cursor: pointer;
+                border-radius: 50px;
+
+                &:last-child {
+                    padding-right: 15px;
+                }
+
+                &:hover {
+                    // border: 2px solid #ddd;
+                    background-color: $color-primary;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    .slide-products {
+        img {
+            // width: 100%;
+        }
+    }
+
+    .slick-prev:before, .slick-next:before{
+        color:$color-white;
+    }
+    
+    .slick-prev {
+        left: 5px;
+        top: -34px;
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+        background-color: #cccccc;
+
+        &::before {
+            content: "<";
+            color: black;
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+    
+    .slick-next {
+        border-radius: 3px;
+        left: 40px;
+        top: -34px;
+        width: 30px;
+        height: 30px;
+        background-color: #cccccc;
+
+        &::before {
+            content: ">";
+            color: black;
+            font-weight: 700;
+            font-size: 1.7rem;
+        }
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}
+
