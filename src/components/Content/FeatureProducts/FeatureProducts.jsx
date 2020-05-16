@@ -22,7 +22,7 @@ const FeatureProducts = () => {
                         <span className="feature-products__box-cate-item">Plumbing</span>
                         <span className="feature-products__box-cate-item">Hand Tools</span>
                         <span className="feature-products__box-cate-item">Power Tool</span>
-                        <span className="feature-products__box-cate-item"> All</span>
+                        <span className="feature-products__box-cate-item">All</span>
                     </div>
                     <span className="strangfoward"></span>
                     <h3 className="feature-products__title">Feature Products</h3>
@@ -31,7 +31,7 @@ const FeatureProducts = () => {
                 <Slider {...settings}>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-1.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -48,14 +48,14 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-2.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -72,32 +72,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div className="grid__column-2">
-                        <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
-                            <div className="slide-product__body">
-                                <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
-                                <div className="review">
-                                    <span>Reviews 12</span>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <span className="slide-product__price">$749.000</span>
-                                <div className="test">
-                                    <div className="wish">
-                                        <i class="fa fa-heart"></i>
-                                        <i class="fa fa-child"></i>
-                                    </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +80,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-3.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -122,7 +97,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +105,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-4.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -147,7 +122,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +130,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-5.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -172,7 +147,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +155,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-6.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -197,7 +172,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -205,7 +180,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-7.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -222,7 +197,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +205,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-8.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -247,7 +222,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +230,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-9.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -272,7 +247,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -280,7 +255,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-10.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -297,7 +272,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +280,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-11.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -322,7 +297,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -330,7 +305,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-12.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -347,7 +322,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +330,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-13.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -372,7 +347,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -380,7 +355,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-14.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -397,7 +372,7 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                         </div>
@@ -405,7 +380,7 @@ const FeatureProducts = () => {
                     </div>
                     <div className="grid__column-2">
                         <div className="add-cart">
-                            <h3><img src="http://placekitten.com/g/230/200" /></h3>
+                            <h3><img src={require('./../../../assets/products/product-15.jpg')} /></h3>
                             <div className="slide-product__body">
                                 <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
                                 <div className="review">
@@ -422,7 +397,32 @@ const FeatureProducts = () => {
                                         <i class="fa fa-heart"></i>
                                         <i class="fa fa-child"></i>
                                     </div>
-                                    <button>Add to cart</button>
+                                    <button>Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className="grid__column-2">
+                        <div className="add-cart">
+                            <h3><img src={require('./../../../assets/products/product-16.jpg')} /></h3>
+                            <div className="slide-product__body">
+                                <a href="" className="slide-product__link">Electric Planer Brandix KL370090G 300 Watts</a>
+                                <div className="review">
+                                    <span>Reviews 12</span>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <span className="slide-product__price">$749.000</span>
+                                <div className="test">
+                                    <div className="wish">
+                                        <i class="fa fa-heart"></i>
+                                        <i class="fa fa-child"></i>
+                                    </div>
+                                    <button>Add To Cart</button>
                                 </div>
                             </div>
                             </div>

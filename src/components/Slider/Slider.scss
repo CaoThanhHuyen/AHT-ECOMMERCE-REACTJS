@@ -9,6 +9,10 @@
 .img-slide {
     position: relative;
 
+    img {
+        width: 100%;
+    }
+
     .slide-content {
         position: absolute;
         bottom: 100px;
@@ -21,7 +25,7 @@
         .slide-content__title {
             font-size: 30px;
             text-align: right;
-            letter-spacing: 1px;
+            line-height: 32px;
             color: #3d464d;
             margin-bottom: 28px;
             animation: fadein 4s ease-in;

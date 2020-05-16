@@ -5,6 +5,7 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  font-family: 'Stroyka', sans-serif;
 }
 
 html {
@@ -13,3 +14,7 @@ html {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Stroyka';
+  src: url('./assets/fonts/stroyka/stroyka.woff') format('opentype');
+}
