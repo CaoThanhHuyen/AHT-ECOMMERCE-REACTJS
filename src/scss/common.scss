@@ -27,6 +27,18 @@
     padding-right: 5px;
     width: 20%;
 }
+
+// status
+.product-status {
+    position: absolute;
+    top: 15px;
+    background-color: #37f;
+    padding: 0px 10px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

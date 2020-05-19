@@ -1,0 +1,41 @@
+@import "../../../scss/variable.scss";
+@import "../../../scss/common.scss";
+
+.box-banner {
+    position: relative;
+
+    .box-banner__body {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            font-size: 3.6rem;
+            word-spacing: -11px;
+            color: $color-text-primary;
+        }
+        span {
+            font-size: 1.8rem;
+            margin-top: 17px;
+            margin-bottom: 20px;
+            color: $color-text-primary;
+        }
+
+        .slide-content__btn {
+            width: 115px;
+            height: 33px;
+            border: none;
+            cursor: pointer;
+            background-color: #ffd333;
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.box-banner__bg {
+    width: 100%;
+}

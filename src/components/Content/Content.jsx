@@ -1,10 +1,17 @@
 import React from 'react';
-import FeatureProducts from './FeatureProducts/FeatureProducts';
+import SimpleSlider from '../Slider/Slider';
+import Feature from '../Feature/Feature';
+import FeatureProducts from '../../views/FeatureProducts/FeatureProducts';
+import Categories from '../../views/Categories';
+import Banner from './Banner/Banner';
 
 const Content = () => {
     return (
         <>
-          <FeatureProducts />  
+          <SimpleSlider />
+          <Feature />
+          <Categories />
+          <Banner />
         </>
     );
 };

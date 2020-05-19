@@ -1,5 +1,5 @@
-@import "../../../scss/variable.scss";
-@import "../../../scss/common.scss";
+@import "../../scss/variable.scss";
+@import "../../scss/common.scss";
 
 .feature-products {
 
@@ -11,7 +11,7 @@
 
         .feature-products__title {
             font-size: 28px;
-            color: #3d464d;
+            color: $color-text-primary;
             &::after {
                 content: "";
             }
@@ -29,7 +29,7 @@
             .feature-products__box-cate-item {
                 font-size: 1.6rem;
                 padding: 3px 15px;
-                color: #3d464d;
+                color: $color-text-primary;
                 cursor: pointer;
                 border-radius: 50px;
                 font-weight: 600;
@@ -53,27 +53,28 @@
     .slide-products {
         img {
             max-width: 100%;
+            // padding: 15px;
+            width: 100%;
         }
 
         .add-cart {
             position: relative;
             cursor: pointer;
-            border: 1px solid #cccccc;
+            border: 1px solid #e8e8e8;
             margin-bottom: 10px;
 
             &:hover {
                 border: 2px solid $color-primary;
+                border-bottom: none;
                 .test {
                    display: flex;
-
-                   
                 }
             }
         }
 
         .test {
             width: 230px;
-            height: 20%;
+            height: 18%;
             position: absolute;
             bottom: -57px;
             z-index: 1000;
@@ -83,7 +84,7 @@
             background-color: #ffffff;
             border-top: none;
             display: none;
-            padding: 14px;
+            padding: $font-size-14;
             right: -2px;
 
             .wish {
@@ -103,12 +104,12 @@
                 width: 100px;
                 border: none;
                 cursor: pointer;
-                color: #3d464d;
+                color: $color-text-primary;
                 font-weight: 700;
                 background-color: $color-primary;
 
                 &:hover {
-                    background-color: #3d464d;
+                    background-color: $color-text-primary;
                     color: $color-white;
                 }
             }
@@ -124,7 +125,7 @@
                 font-size: 1.6rem;
                 text-align: right;
                 text-decoration: none;
-                color: #3d464d;
+                color: $color-text-primary;
                 line-height: 20px;
             }
             .review {
@@ -143,25 +144,35 @@
             .slide-product__price {
                 font-size: 1.6rem;
                 font-weight: 700;
-                color: #3d464d;
+                color: $color-text-primary;
                 margin-top: 5px;
             }
-
-            
         }
+    }
+
+    .slick-list {
+        height: 700px;
     }
 
     .slick-prev:before, .slick-next:before{
         color:$color-white;
     }
     
-    .slick-prev {
-        left: 5px;
+    .slick-prev, .slick-next {
+        
         top: -34px;
         width: 30px;
         height: 30px;
         border-radius: 3px;
         background-color: #cccccc;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    .slick-prev {
+        left: 5px;
 
         &::before {
             content: "<";
@@ -169,29 +180,16 @@
             font-weight: 700;
             font-size: 1.7rem;
         }
-
-        &:hover {
-            background-color: $color-primary;
-        }
     }
     
     .slick-next {
-        border-radius: 3px;
         left: 40px;
-        top: -34px;
-        width: 30px;
-        height: 30px;
-        background-color: #cccccc;
 
         &::before {
             content: ">";
             color: black;
             font-weight: 700;
             font-size: 1.7rem;
-        }
-
-        &:hover {
-            background-color: $color-primary;
         }
     }
 }
