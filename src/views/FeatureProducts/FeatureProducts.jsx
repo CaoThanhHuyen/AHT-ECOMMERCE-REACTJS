@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import Categories from '../Categories';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from './actions';
+import { Link } from 'react-router-dom';
 
 const FeatureProducts = (props) => {
     const settings = {
@@ -15,7 +16,10 @@ const FeatureProducts = (props) => {
         slidesPerRow: 2
     };
     const dispatch = useDispatch();
+    
     const products = useSelector(state => state.products.listProducts);
+    
+    const isLoading = useSelector(state => state.products.isLoading);
     
     useEffect(() => {
         dispatch(getProducts(props.idCate));
@@ -29,9 +33,15 @@ const FeatureProducts = (props) => {
                         {products.map((product, index) => (
                             <div className="grid__column-2" key={index}>
                                 <div className="add-cart">
-                                    <h3><img src={product.avatar}/></h3>
+                                    <Link 
+                                        to={`/products/${product.id}`}><img src={product.avatar}/>
+                                    </Link>
                                     <div className="slide-product__body">
-                                        <a href="" className="slide-product__link">{product.nameProd}</a>
+                                        <Link 
+                                            to={`/products/${product.id}`} 
+                                            className="slide-product__link">
+                                            {product.nameProd}
+                                        </Link>
                                         <div className="review">
                                             <span>Reviews 12</span>
                                             <i className="fa fa-star"></i>
@@ -40,7 +50,10 @@ const FeatureProducts = (props) => {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star"></i>
                                         </div>
-                                        <span className="slide-product__price">{product.Price} $</span>
+                                        <span className={`slide-product__price ${product.status === "sale" ? "slide-product__price--sale" : ""}`}>
+                                            <span className={ `price-sale ${product.status === "sale" ? "price-sale--active" : ""}`}>$ {product.oldPrice}</span> 
+                                            {product.Price} $
+                                        </span>
                                         <div className="test">
                                             <div className="wish">
                                                 <i className="fa fa-heart"></i>
@@ -48,10 +61,10 @@ const FeatureProducts = (props) => {
                                             </div>
                                             <button>Add To Cart</button>
                                         </div>
-                                        <label htmlFor="" className="product-status">NEW</label>
-                                        <label htmlFor="" className="product-status">SALE</label>
-                                        <label htmlFor="" className="product-status">HOT</label>
-                                    </div>
+                                        <label htmlFor="" className={product.status === "new" ? "product-status product-status__new--active" : "disable"}>NEW</label>
+                                        <label htmlFor="" className={product.status === "sale" ? "product-status product-sale--active" : "disable"}>SALE</label>
+                                        <label htmlFor="" className={product.status === "hot" ? "product-status product-hot--active" : "disable"}>HOT</label>
+                                    </div>  
                                 </div>
                             </div>
                         ))}
@@ -59,6 +72,7 @@ const FeatureProducts = (props) => {
                     </Slider>
                 </div>
             </div>
+            <div id={isLoading === true ? "spiner" : ""}></div>
       </div>
     );
 };

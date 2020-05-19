@@ -2,6 +2,7 @@
 @import "../../scss/common.scss";
 
 .feature-products {
+    position: relative;
 
     .feature-products__box {
         display: flex;
@@ -33,6 +34,7 @@
                 cursor: pointer;
                 border-radius: 50px;
                 font-weight: 600;
+                border: 2px solid transparent;
 
                 &:last-child {
                     padding-right: 15px;
@@ -40,8 +42,15 @@
 
                 &:hover {
                     // border: 2px solid #ddd;
-                    background-color: $color-primary;
-                    transition: 0.3s;
+                    border: 2px solid #e4e4e4;
+                }
+            }
+            .feature-products__box-cate-item--active {
+                border: 2px solid $color-primary;
+                cursor: default;
+
+                &:hover {
+                    border: 2px solid $color-primary;
                 }
             }
         }
@@ -60,7 +69,7 @@
         .add-cart {
             position: relative;
             cursor: pointer;
-            border: 1px solid #e8e8e8;
+            // border: 1px solid #e8e8e8;
             margin-bottom: 10px;
             border: 2px solid #e8e8e8;
 
@@ -147,12 +156,48 @@
                 font-weight: 700;
                 color: $color-text-primary;
                 margin-top: 5px;
+                word-spacing: -5px;
             }
+            .slide-product__price--sale {
+                color: red;
+            }
+
+
+            // label Status
+            .disable {
+                display: none;
+            }
+            .product-status__new--active {
+                background-color: #37f;
+            }
+
+            .product-sale--active {
+                background-color: #f33;
+            }
+
+            .product-hot--active {
+                background-color: #614ba6;
+            }
+
+            .price-sale {
+                font-size: 1.2rem;
+                text-decoration: line-through;
+                color: #acacac;
+                display: none;
+                word-spacing: -5px;
+                 margin-right: 10px;
+            }
+
+            .price-sale--active {
+                display: inline-block;
+            }
+
+            
         }
     }
 
     .slick-list {
-        height: 700px;
+        height: 750px;
     }
 
     .slick-prev:before, .slick-next:before{
@@ -165,7 +210,8 @@
         width: 30px;
         height: 30px;
         border-radius: 3px;
-        background-color: #cccccc;
+        background-color: #e4e4e4;
+        transition: 0.3s;
 
         &:hover {
             background-color: $color-primary;
@@ -195,3 +241,36 @@
     }
 }
 
+
+// spiner
+#spiner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e596;
+}
+
+#spiner::after {
+    content: "";
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid #f25a41;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: tranform;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,7 +1,8 @@
 import {ActionTypes} from './action';
 
 const DEFAULT_STATE = {
-    listCate: []
+    listCate: [],
+    activeID: 1
 }
 
 const CategoriesReducer = (state = DEFAULT_STATE, action) => {
@@ -14,6 +15,12 @@ const CategoriesReducer = (state = DEFAULT_STATE, action) => {
         case ActionTypes.GET_CATEGORIES_ERROR: 
             return state;
         
+        case ActionTypes.SET_ACTIVE_CATEGORIES:
+            const newActiveId = action.payload;
+            return {
+                ...state,
+                activeID: newActiveId
+            };
         default: 
             return state;
     }

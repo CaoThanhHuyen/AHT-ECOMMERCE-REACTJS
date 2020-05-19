@@ -9,6 +9,7 @@ import Test1 from './components/Test1';
 import Test2 from './components/Test2';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import SingleProduct from './views/SingerProduct';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Content} />
             <Route path="/test1" component={Test1} />
             <Route path="/test2" component={Test2} />
+            <Route path="/products/:id" component={SingleProduct} />
           </Switch>
       </div>
       </Provider>
