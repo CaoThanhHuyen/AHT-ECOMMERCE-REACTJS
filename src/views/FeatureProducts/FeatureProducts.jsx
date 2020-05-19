@@ -40,7 +40,7 @@ const FeatureProducts = (props) => {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star"></i>
                                         </div>
-                                        <span className="slide-product__price">{product.price}</span>
+                                        <span className="slide-product__price">{product.Price} $</span>
                                         <div className="test">
                                             <div className="wish">
                                                 <i className="fa fa-heart"></i>
@@ -49,6 +49,8 @@ const FeatureProducts = (props) => {
                                             <button>Add To Cart</button>
                                         </div>
                                         <label htmlFor="" className="product-status">NEW</label>
+                                        <label htmlFor="" className="product-status">SALE</label>
+                                        <label htmlFor="" className="product-status">HOT</label>
                                     </div>
                                 </div>
                             </div>
