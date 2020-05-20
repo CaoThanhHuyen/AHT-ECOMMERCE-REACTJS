@@ -1,0 +1,39 @@
+.product-right {
+    border: 1px solid #e4e4e4;
+    padding-left: 15px;
+
+    .slick-slide img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .test {
+        width: 100%;
+    }
+    
+    ul.slick-dots{
+        right: 0;
+        margin-top: 10px;
+        bottom: unset !important;
+        left: unset;
+    
+        li {
+            width: 100px;
+            margin-left: 15px;
+            height: 100%;
+            border: 2px solid #ddd;
+    
+            a {
+                width: 100px;
+                height: 90px;
+                display: block;
+                padding: 10px;
+                
+            }
+        }
+    
+        .slick-active {
+            border: 2px solid $color-primary;
+        }
+    }
+}

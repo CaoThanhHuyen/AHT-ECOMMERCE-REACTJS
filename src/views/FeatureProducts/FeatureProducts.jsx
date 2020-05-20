@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import "./FeatureProducts.scss"
 import Slider from 'react-slick';
-import Categories from '../Categories';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from './actions';
 import { Link } from 'react-router-dom';

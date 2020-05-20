@@ -5,7 +5,7 @@ const DEFAULT_STATE = {
     isLoading: false
 } 
 
-const ProductReducer = (state = DEFAULT_STATE, action) => {
+const ProductsReducer = (state = DEFAULT_STATE, action) => {
     switch (action.type) {
         case ActionTypes.GET_PRODUCTS: 
             return {
@@ -26,4 +26,4 @@ const ProductReducer = (state = DEFAULT_STATE, action) => {
     }
 }
 
-export default ProductReducer;
+export default ProductsReducer;

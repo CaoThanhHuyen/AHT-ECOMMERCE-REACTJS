@@ -45,6 +45,22 @@
     font-weight: 700;
 }
 
+.slide-content__btn {
+    width: 162px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: $color-primary;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #3d464d;
+        a {
+            color: $color-white;
+        }
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

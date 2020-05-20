@@ -62,19 +62,18 @@
     .slide-products {
         img {
             max-width: 100%;
-            // padding: 15px;
             width: 100%;
         }
 
         .add-cart {
             position: relative;
             cursor: pointer;
-            // border: 1px solid #e8e8e8;
+            height: 360px;
             margin-bottom: 10px;
-            border: 2px solid #e8e8e8;
+            border: 1px solid #e8e8e8;
 
             &:hover {
-                border: 2px solid $color-primary;
+                border: 1px solid $color-primary;
                 border-bottom: none;
                 .test {
                    display: flex;
@@ -90,12 +89,12 @@
             z-index: 1000;
             display: flex;
             justify-content: space-between;
-            border: 2px solid #ffd333;
+            border: 1px solid #ffd333;
             background-color: #ffffff;
             border-top: none;
             display: none;
             padding: $font-size-14;
-            right: -2px;
+            right: -1px;
 
             .wish {
                 display: inline-flex;

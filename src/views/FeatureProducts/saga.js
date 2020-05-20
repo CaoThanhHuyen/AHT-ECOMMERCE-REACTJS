@@ -9,7 +9,6 @@ function* sagaGetProducts(action) {
         method: 'GET'
     });
     const resJSON = yield response.json()
-    console.log(action);
     
     yield put(getProductsSuccess(resJSON))
 }
