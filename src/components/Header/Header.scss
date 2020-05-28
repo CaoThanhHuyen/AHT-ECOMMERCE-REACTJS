@@ -5,7 +5,6 @@
     background-color: $color-primary;
     height: 54px;
 }
-
 .header {
     display: flex;
     align-items: center;
@@ -19,6 +18,7 @@
             padding: 11px 15px 15px 15px;
             border-radius: 5px;
             color: #000;
+            position: relative;
             
             &:hover {
                 background-color: #ffe999;
@@ -39,6 +39,9 @@
                 line-height: 7px;
                 border-radius: 50%;
             }
+        }
+        .header-left__icon-link--active {
+            background-color: #ffe999;
         }
         
     }

@@ -84,19 +84,40 @@
                 display: flex;
                 justify-content: flex-end;
 
-                .radio-color__item {
+                .product-radio {
+                    position: relative;
+                    margin: 0 10px;
+                    background-color: red;
                     width: 25px;
-                    height: 25px;
-                    font-size: red;
-                    background-color: #fa0000;
-                    display: block;
-                    margin: 0 4px;
-                    cursor: pointer;
                     border-radius: 100%;
-                    transition: 0.3s;
+                    cursor: pointer;
+                    transition: 0.4s;
+
+                        input[type="radio"] {
+                            cursor: pointer;
+                            opacity: 0;
+
+                            &::after {
+                                content: "";
+                                width: 25px;
+                                display: block;
+                                position: absolute;
+                                left: 0px;
+                                z-index: 16;
+                                height: 25px;
+                                top: 0;
+                                border-radius: 100%;
+                                opacity: 0;
+                            }
+                        }
+                        .prod-color {
+                            width: 25px;
+                            border-radius: 50%;
+                    }
 
                     &:hover {
-                        transform: scale(1.2);
+                        transform: scale(1.25);
+                        
                     }
                 }
 
@@ -114,21 +135,34 @@
 
                 .radio-color__item--white {
                     background-color: white;
-                    border: 1px solid gray;
+                    // border: 1px solid gray;
                 }
             }
 
             .product-material__item {
                 position: relative;
+                cursor: pointer;
                 margin: 0 40px;
                 
                 &:last-child {
                     margin-right: 0;
                 }
-                input {
-                    position: relative;
+                input[type="radio"] {
+                    // position: relative;
                     z-index: 1;
-                    opacity: 0;
+                    // opacity: 0;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 75px;
+                        height: 30px;
+                        right: 0;
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+                    
                 }
                 .product-material__item-title {
                     position: absolute;
@@ -145,6 +179,7 @@
                     font-weight: 600;
                     border-radius: 2px;
 
+                   
                     &:hover {
                         background-color: #ddd;
                         transition: 0.35s ease-in-out;
@@ -223,6 +258,12 @@
                 &:hover {
                     color: $color-white;
                     background-color: $color-text-primary;
+                }
+            }
+            .cart-singer {
+                margin: 0 10px;
+                span {
+                    font-size: 1.6rem;
                 }
             }
                 

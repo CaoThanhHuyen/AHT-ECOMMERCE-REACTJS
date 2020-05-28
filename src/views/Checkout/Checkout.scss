@@ -1,0 +1,149 @@
+@import "../../scss/variable.scss";
+@import "../../scss/common.scss";
+
+.checkout {
+    .billing-detail {
+        padding: 3rem;
+        margin-right: 3rem;
+        border: 2px solid #efefef;
+
+        .billing-detail__title {
+            font-size: 2.6rem;
+            color: $color-text-primary;
+            margin-bottom: 3rem;
+        }
+
+        .group-input {
+            width: 100%;
+            display: flex;
+            margin-bottom: 2rem;
+            
+            .gr-input {
+                width: 100%;
+
+                label {
+                    display: block;
+                    font-size: 1.6rem;
+                    color: $color-text-primary;
+                    margin-bottom: 5px;
+                }
+                input , select{
+                    width: 100%;
+                    height: 3.5rem;
+                    border: 1px solid #cecece;
+                    border-radius: 2px;
+                }
+            }
+        }
+        
+
+        .group-two-input {
+            .group-input-left {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .your-order {
+        padding: 3rem;
+        border: 1px solid #efefef;
+
+        h3 {
+            font-size: 2.6rem;
+            color: $color-text-primary;
+            margin-bottom: 3rem;
+        }
+
+        .your-order-body {
+            // common
+            .your-order__left-right {
+                display: flex;
+                justify-content: space-between;
+            }
+            .color-bold {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: $color-text-primary;
+            }
+
+            // --------
+
+            .your-order-body__title {
+                border-bottom: 1px solid #eaeaea;
+                padding-bottom: 5px;
+            }
+            
+            .your-order-body__products {
+                border-bottom: 1px solid #eaeaea;
+                padding: 15px 0;
+                
+                .product {
+                    font-size: 1.4rem;
+
+                    p {
+                        padding-right: 10rem;
+                    }
+                }
+            }
+
+            .your-order-body__subtotals {
+                padding: 15px 0px;
+                border-bottom: 1px solid #eaeaea;
+
+                .subtotal {
+                    span {
+                        font-size: 1.4rem;
+                        color: $color-text-primary;
+                    }
+                }
+            }
+
+            .total {
+                padding: 15px 0px;
+
+                label {
+                    font-size: 2.6rem;
+                    color: $color-text-primary;
+                    font-weight: 700;
+                }
+                span {
+                    font-size: 2.6rem;
+                    color: $color-text-primary;
+                }
+            }
+
+            .form-check {
+                display: flex;
+                align-items: baseline;
+                margin: 15px 0px;
+
+                input {
+                    margin-right: 10px;
+                }
+
+                label {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .form-btn-place-order {
+                .btn-place-order {
+                    width: 100%;
+                    margin-top: 2rem;
+                    font-size: 2.2rem;
+                    background-color: $color-primary;
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                    line-height: 50px;
+
+                    &:hover {
+                        background-color: $color-text-primary;
+                        color: $color-white;
+                    }
+                }
+            }
+
+        }
+    }
+}

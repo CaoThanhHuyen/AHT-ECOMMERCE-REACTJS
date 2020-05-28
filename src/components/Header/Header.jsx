@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./Header.scss";
 import { Link } from 'react-router-dom';
+import Cart from '../../views/Cart';
+import { useSelector } from 'react-redux';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
+    const node = useRef();
+    const [open, setOpen] = useState(false);
+    const countCarts = useSelector(state => state.cart.length)
+    const countWishList = useSelector(state => state.wishList.length)
+    
+    const handleClick = (e) => {
+        if(node.current.contains(e.target)) {
+            return;
+        }
+        setOpen(false);
+    }
+
+    const setHienthi = (open) => {
+        setOpen(open);
+    }
+    
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClick);
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClick);
+        };
+      }, []);
+      
     return (
         <div className="app-header">
             <div className="grid">
@@ -12,17 +40,30 @@ const Header = () => {
                             <a href="#" className="header-left__icon-link">
                                 <i className="fa fa-user"></i>
                             </a>
-                            <a href="#" className="header-left__icon-link">
-                                <i className="fa fa-shopping-cart"></i>
-                                <span className="header-left__item">2</span>
+
+                            <span  ref={node}>
+                            <a 
+                                href="#" 
+                                className={`header-left__icon-link ${open == true ? "header-left__icon-link--active" : ''}`} 
+                                onClick={e => setOpen(!open)}>
+
+                                    <i className="fa fa-shopping-cart"></i>
+                                    <span className="header-left__item">{countCarts}</span>
                             </a>
-                            <a href="#" className="header-left__icon-link">
+                            { open && ( <Cart setHienthi={setHienthi} />)}
+                            </span>
+
+                            <Link to="/shop/wishlist" className="header-left__icon-link">
                                 <i className="fa fa-heart"></i>
-                                <span className="header-left__item">0</span>
-                            </a>
+                                <span className="header-left__item">{countWishList}</span>
+                            </Link>
+                            
                             <a href="#" className="header-left__icon-link">
                                 <i className="fa fa-search"></i>
                             </a>
+                            
+                           
+                            
                         </div>
                     </div>
                     <div className="header-right">
@@ -86,6 +127,8 @@ const Header = () => {
                             <i className="fa fa-angle-down"></i>
                                 <Link to="/" className="header-right__link">Home</Link>
                             </li>
+                            
+                          
                         </ul>
                         {/* <a href="#" className="header-brand">STROYKA</a> */}
                         <Link to="/" className="header-brand">STROYKA</Link>

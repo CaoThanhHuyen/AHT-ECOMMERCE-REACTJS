@@ -2,7 +2,7 @@ import {ActionTypes} from './action';
 
 const DEFAULT_STATE = {
     listCate: [],
-    activeID: 1
+    activeID: 1,
 }
 
 const CategoriesReducer = (state = DEFAULT_STATE, action) => {

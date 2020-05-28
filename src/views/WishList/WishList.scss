@@ -1,0 +1,117 @@
+@import "../../scss/variable.scss";
+@import "../../scss/common.scss";
+
+
+.wish-list {
+    width: 100%;
+    border-spacing: 0;
+    margin-top: 100px;
+    border: 2px solid #ececec;
+
+    .wish-list__head {
+        background-color: #f7f7f7;
+        font-size: 1.2rem;
+        
+        .wish-list__column {
+            padding: 12px 18px;
+
+            &:last-child {
+                width: 1px;
+            }
+        }
+        .wish-list__column--product {
+            text-align: left;
+        }
+    }
+    .wish-list__body {
+        .wish-list__column {
+            border-top: 1px solid #e2e2e2;
+        }
+        .wish-list__column--image {
+            width: 1px;
+            .image-product {
+                width: 80px;
+    
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .wish-list__column--product {
+            .product-body {
+                a {
+                    font-size: 1.4rem;
+                    text-decoration: none;    
+                    color: $color-text-primary;            
+                }
+                .star-product {
+                    font-size: 1.4rem;
+                    i {
+                        color: $color-primary;
+                    }
+
+                    span {
+                        margin-left: 1rem;
+                        color: #b3b3b3;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .wish-list__column--stock {
+            text-align: center;
+                label {
+                    font-size: 1.2rem;
+                    background-color: #28a745;
+                    padding: 4px;
+                    border-radius: 2px;
+                    color: $color-white;
+                    font-weight: 700;
+                }
+        }
+
+        .wish-list__column--price {
+            text-align: center;
+            font-size: 1.6rem;
+            color: $color-text-primary;
+            width: 16rem;
+        }
+
+        .wish-list__column-btn {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 10rem;
+            width: 24rem;
+
+            .btn-add-cart {
+                background-color: #ffd333;
+                padding: 8px 15px;
+                border: none;
+                font-weight: 700;
+                color: $color-text-primary;
+                word-spacing: -4px;
+                cursor: pointer;
+
+                &:hover {
+                    background: $color-text-primary;
+                    color: $color-white;
+                }
+            }
+
+            .btn-remove-cart {
+                border: none;
+                background-color: transparent;
+                padding: 7px;
+                border-radius: 2px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #e6e6e6;
+                }
+            }
+        }
+        
+    }
+
+}

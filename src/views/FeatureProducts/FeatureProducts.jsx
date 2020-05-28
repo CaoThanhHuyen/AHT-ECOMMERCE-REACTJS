@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProducts } from './actions';
 import { Link } from 'react-router-dom';
+import { addToCart } from '../Cart/action';
+import { addWishList } from '../WishList/action';
 
 const FeatureProducts = (props) => {
     const settings = {
@@ -23,6 +25,25 @@ const FeatureProducts = (props) => {
     useEffect(() => {
         dispatch(getProducts(props.idCate));
     },[props.idCate])
+
+    const handleAddToCart = (product, color = "", material = "", quantity) => {
+        dispatch(addToCart(product, color, material, quantity = 1))
+    }
+
+    const showRating = (rating) => {
+        let result = [];
+        for(let i = 1; i <= rating; i++) {
+            result.push(<i className="fa fa-star"></i>)
+        }
+        for(let j = 1; j <= (5 - rating); j++) {
+            result.push(<i className="fa fa-star-o"></i>)
+        }
+        return result;
+    }
+
+    const handleAddWishList = (product) => {
+        dispatch(addWishList(product))
+    }
     
     return (
         <div className="feature-products">
@@ -43,11 +64,9 @@ const FeatureProducts = (props) => {
                                         </Link>
                                         <div className="review">
                                             <span>Reviews 12</span>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
+
+                                            {showRating(product.rating)}
+
                                         </div>
                                         <span className={`slide-product__price ${product.status === "sale" ? "slide-product__price--sale" : ""}`}>
                                             <span className={ `price-sale ${product.status === "sale" ? "price-sale--active" : ""}`}>$ {product.oldPrice}</span> 
@@ -55,10 +74,16 @@ const FeatureProducts = (props) => {
                                         </span>
                                         <div className="test">
                                             <div className="wish">
-                                                <i className="fa fa-heart"></i>
+                                                <i className="fa fa-heart" onClick={() => handleAddWishList(product)}></i>
                                                 <i className="fa fa-child"></i>
                                             </div>
-                                            <button>Add To Cart</button>
+
+                                            <div class="box-1 box-add-cart" onClick={() => handleAddToCart(product, product.color,product.material, product.Quantity)}>
+                                                <a class="btn-common btn-add-cart btn-one">
+                                                    <span>Add to Cart</span>
+                                                </a>
+                                            </div>
+                                            {/* <button onClick={() => handleAddToCart(product, product.color,product.material, product.Quantity)}>Add To Cart</button> */}
                                         </div>
                                         <label htmlFor="" className={product.status === "new" ? "product-status product-status__new--active" : "disable"}>NEW</label>
                                         <label htmlFor="" className={product.status === "sale" ? "product-status product-sale--active" : "disable"}>SALE</label>

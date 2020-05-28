@@ -1,6 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Cart/action';
 
 const ProductLeft = ({product}) => {
+
+    const dispatch = useDispatch();
+
+    const [quantity, setQuantity] = useState(0);
+    const [color, setColor] = useState('')
+    const [material, setMaterial] = useState('');
+    
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product, color, material, quantity))
+    }
+
+    const handleIncreQuantity = () => {
+        if (quantity > 0) {
+            setQuantity(quantity - 1)
+        }
+    }
+    const handleDecQuantity = () => {
+            setQuantity(quantity + 1)
+    }
+
+    const hanldeOptionChange = (e) => {
+        setColor(e.target.value);   
+    }
+
+    const handleMaterialChange = e => {
+        setMaterial(e.target.value);
+        
+    }
+
+    const showRating = (rating) => {
+        let result = [];
+        for(let i = 1; i <= rating; i++) {
+            result.push(<i className="fa fa-star"></i>)
+        }
+        for(let j = 1; j <= (5 - rating); j++) {
+            result.push(<i className="fa fa-star-o"></i>)
+        }
+        return result;
+    }
+    
+
     return (
         <div className="product-left">
             <h3 className="product-name">{product.nameProd}</h3>
@@ -10,11 +53,7 @@ const ProductLeft = ({product}) => {
                     <a href="" className="box-review__review-link">White Reivew</a>
                 </div>
                 <div className="box-review__rating-star">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
+                   {showRating(product.rating)}
                 </div>
             </div>
             <p className="product-desc">{product.desc}</p>
@@ -36,25 +75,38 @@ const ProductLeft = ({product}) => {
                 <div className="product-options">
                     <p htmlFor="" className="product-options__title">COLOR</p>
                     <div className="product-options__list">
-                        <label htmlFor="" className="radio-color__item radio-color__item--blue"></label>
-                        <label htmlFor="" className="radio-color__item radio-color__item--red"></label>
-                        <label htmlFor="" className="radio-color__item radio-color__item--yellow"></label>
-                        <label htmlFor="" className="radio-color__item radio-color__item--white"></label>
+            
+                        <label htmlFor="" className="product-radio radio-color__item--white">
+                            <input type="radio" name="test" value="white" onChange={hanldeOptionChange}/>
+                            <label htmlFor="" className="prod-color"></label>
+                        </label>
+                        <label htmlFor="" className="product-radio radio-color__item--yellow">
+                            <input type="radio"  name="test" value="yellow" onChange={hanldeOptionChange}/>
+                            <label htmlFor="" className="prod-color"></label>
+                        </label>
+                        <label htmlFor="" className="product-radio radio-color__item--red">
+                            <input type="radio"  name="test" value="red" onChange={hanldeOptionChange}/>
+                            <label htmlFor="" className="prod-color"></label>
+                        </label>
+                        <label htmlFor="" className="product-radio radio-color__item--blue ">
+                            <input type="radio"  name="test" value="blue" onChange={hanldeOptionChange}/>
+                            <label htmlFor="" className="prod-color"></label>
+                        </label>
                     </div>
                 </div>
                 <div className="product-options">
                     <p htmlFor="" className="product-options__title">MATERIAL</p>
                     <div className="product-options__list">
                         <label htmlFor="" className="product-material__item">
-                            <input type="radio"/>
+                            <input type="radio" name="material" value="Metal" onChange={handleMaterialChange}/>
                             <label htmlFor="" className="product-material__item-title">Metal</label>
                         </label>
-                        <label htmlFor="" className="product-material__item">
-                            <input type="radio"/>
+                        <label htmlFor="" className="product-material__item" >
+                            <input type="radio"  name="material" value="Wood" onChange={handleMaterialChange}/>
                             <label htmlFor="" className="product-material__item-title">Wood</label>
                         </label>
                         <label htmlFor="" className="product-material__item">
-                            <input type="radio"/>
+                            <input type="radio"  name="material" value="Platic" onChange={handleMaterialChange}/>
                             <label htmlFor="" className="product-material__item-title">Platic</label>
                         </label>
 
@@ -78,13 +130,18 @@ const ProductLeft = ({product}) => {
                             </div>
                         </div>
                         <div className="product__actions-item">
-                            <button className="slide-content__btn addtoccart">Add to cart</button>
+                        <div class="box-1 box-add-cart cart-singer " onClick={() => handleAddToCart(product)}>
+                            <a class="btn-common btn-add-cart btn-one">
+                                <span>Add to Cart</span>
+                            </a>
+                        </div>
+                            {/* <button className="slide-content__btn addtoccart" onClick={() => handleAddToCart(product)}>Add to cart</button> */}
                         </div>
                         <div className="product__actions-item">
                             <div className="product-quantity">
-                                <span>&ndash;</span>
-                                <input type="number" value="0" className="count-input"/>
-                                <span>+</span>
+                                <span onClick={handleIncreQuantity}>&ndash;</span>
+                                <input type="number" value={quantity} className="count-input"/>
+                                <span onClick={handleDecQuantity}>+</span>
                             </div>
                         </div>
                     </div>

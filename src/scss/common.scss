@@ -34,6 +34,18 @@
     width: 50%;
 }
 
+.grid__column-7 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60%;
+}
+
+.grid__column-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40%;
+}
+
 // status
 .product-status {
     position: absolute;
@@ -60,6 +72,113 @@
         }
     }
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// button
+.btn {
+    min-width: 162px;
+    min-height: 50px;
+    border: none;
+    cursor: pointer;
+    // background-color: #ffd333;
+    transition: 0.2s ease-in-out;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: $color-text-primary;
+
+    
+}
+
+.box-1{
+    height: auto;
+    width: 140px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 { background-color: $color-text-primary; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn-common {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+    color: $color-text-primary;
+    transition: all 0.3s;
+    position: relative;
+}
+.btn-one span {
+    transition: all 0.3s;
+    font-size: 2.2rem;
+    font-weight: bold;
+    z-index: 10;
+    position: relative;
+}
+.btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+.btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+}
+.btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: $color-primary;
+}
+.btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
 
 @keyframes fadeIn {
     from {
